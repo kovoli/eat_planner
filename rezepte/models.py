@@ -5,10 +5,10 @@ from ckeditor.fields import RichTextField
 from imagekit.processors import ResizeToFill
 from imagekit.models import ProcessedImageField
 
+
 class Category(models.Model):
     name = models.CharField(max_length=255)
     slug = models.SlugField(max_length=255)
-
 
     def __str__(self):
         return self.name
