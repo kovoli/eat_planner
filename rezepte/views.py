@@ -1,5 +1,7 @@
 from django.shortcuts import render
+from .models import Recept, Category
 
+def rezept_list(request):
+    alle_rezepte = Recept.objects.all()
 
-def rezepte_list(request):
-    return render(request, 'rezepte/base.html',)
+    return render(request, 'rezepte/sites/rezept_list.html', context={'rezepte': alle_rezepte})

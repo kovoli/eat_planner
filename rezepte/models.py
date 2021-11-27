@@ -25,9 +25,10 @@ class Recept(models.Model):
     image = ProcessedImageField(upload_to='recept_images',
                                 processors=[ResizeToFill(100,100)],
                                 format='JPEG',
-                                options={'quality': 100})
+                                options={'quality': 100},
+                                blank=True)
     category = models.ForeignKey(Category, related_name='category', on_delete=models.CASCADE)
-    descripton = RichTextField(blank=True, null=True)
+    description = RichTextField(blank=True, null=True)
 
     def __str__(self):
         return self.name

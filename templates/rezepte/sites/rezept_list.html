@@ -1,0 +1,13 @@
+{% extends 'rezepte/base.html' %}
+
+{% block title %}Alle Rezepte{% endblock %}
+
+{% block content %}
+{% for rezept in rezepte %}
+    <h2>{{ rezept.name }}</h2>
+    <p>
+        {{ rezept.description|safe }}
+    </p>
+{% endfor %}
+
+{% endblock %}
