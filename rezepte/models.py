@@ -6,6 +6,10 @@ from imagekit.processors import ResizeToFill
 from imagekit.models import ProcessedImageField
 
 
+# class Ingredient(models.Model):
+#     name = models.CharField(max_length=255)
+
+
 class Category(models.Model):
     name = models.CharField(max_length=255)
     slug = models.SlugField(max_length=255)

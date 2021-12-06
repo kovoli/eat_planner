@@ -3,11 +3,15 @@
 {% block title %}Alle Rezepte{% endblock %}
 
 {% block content %}
-{% for rezept in rezepte %}
-    <h2>{{ rezept.name }}</h2>
-    <p>
-        {{ rezept.description|safe }}
-    </p>
-{% endfor %}
+<div class="row mt-5">
+    {% for rezept in rezepte %}
+        <div class="col">
+            <h2>{{ rezept.name }}</h2>
+            <p>
+                {{ rezept.description|safe }}
+            </p>
+        </div>
+    {% endfor %}
+</div>
 
 {% endblock %}
